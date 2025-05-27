@@ -1,0 +1,15 @@
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\bin\Release\Malison.ExampleApp.exe
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\bin\Release\Malison.ExampleApp.pdb
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\bin\Release\Bramble.Core.dll
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\bin\Release\Malison.Core.dll
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\bin\Release\Malison.WinForms.dll
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\bin\Release\Malison.Core.pdb
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\bin\Release\Malison.WinForms.pdb
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison.ExampleApp.csproj.AssemblyReference.cache
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison.ExampleApp.MainForm.resources
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison.ExampleApp.Properties.Resources.resources
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison.ExampleApp.csproj.GenerateResource.cache
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison.ExampleApp.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison..161B70FF.Up2Date
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison.ExampleApp.exe
+C:\Users\Sebastian\git\malison\Malison.ExampleApp\obj\Release\Malison.ExampleApp.pdb

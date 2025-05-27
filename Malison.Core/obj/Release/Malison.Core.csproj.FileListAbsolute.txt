@@ -1,0 +1,7 @@
+C:\Users\Sebastian\git\malison\bin\Release\Malison.Core.dll
+C:\Users\Sebastian\git\malison\bin\Release\Malison.Core.pdb
+C:\Users\Sebastian\git\malison\Malison.Core\obj\Release\Malison.Core.csproj.AssemblyReference.cache
+C:\Users\Sebastian\git\malison\Malison.Core\obj\Release\Malison.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\git\malison\Malison.Core\obj\Release\Malison..E368B943.Up2Date
+C:\Users\Sebastian\git\malison\Malison.Core\obj\Release\Malison.Core.dll
+C:\Users\Sebastian\git\malison\Malison.Core\obj\Release\Malison.Core.pdb

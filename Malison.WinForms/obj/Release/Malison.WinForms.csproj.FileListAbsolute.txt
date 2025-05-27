@@ -1,0 +1,11 @@
+C:\Users\Sebastian\git\malison\bin\Release\Malison.WinForms.dll
+C:\Users\Sebastian\git\malison\bin\Release\Malison.WinForms.pdb
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.csproj.AssemblyReference.cache
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.Properties.Resources.resources
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.TerminalControl.resources
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.TerminalForm.resources
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.csproj.GenerateResource.cache
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison..1C581F08.Up2Date
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.dll
+C:\Users\Sebastian\git\malison\Malison.WinForms\obj\Release\Malison.WinForms.pdb
