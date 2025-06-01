@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Bmac_smooth_16x24.png" />
     <Content Include="Images\Terminal10x12.png" />
     <Content Include="Images\Terminal6x10.png" />
     <Content Include="Images\Terminal7x10.png" />
@@ -93,6 +94,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TerminalControl.resx">
       <DependentUpon>TerminalControl.cs</DependentUpon>

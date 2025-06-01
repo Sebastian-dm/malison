@@ -22,6 +22,7 @@ namespace Malison.Core
         void Write(Character character);
         void Write(string text);
         void Write(CharacterString text);
+        void Write(int spriteId);
 
         void Scroll(Vec offset, Func<Vec, Character> scrollOnCallback);
         void Scroll(int x, int y, Func<Vec, Character> scrollOnCallback);

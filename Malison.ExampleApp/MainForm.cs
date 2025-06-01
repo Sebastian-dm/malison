@@ -31,9 +31,9 @@ namespace Malison.ExampleApp
 
             ITerminal blueTerm = Terminal[TermColor.Blue];
             blueTerm[20, 6, 1, 3].DrawBox(DrawBoxOptions.None);
-            blueTerm[21, 6, 1, 3].DrawBox(DrawBoxOptions.ContinueLines);
-            blueTerm[22, 6, 1, 3].DrawBox(DrawBoxOptions.DoubleLines);
-            blueTerm[23, 6, 1, 3].DrawBox(DrawBoxOptions.DoubleLines | DrawBoxOptions.ContinueLines);
+            blueTerm[22, 6, 1, 3].DrawBox(DrawBoxOptions.ContinueLines);
+            blueTerm[24, 6, 1, 3].DrawBox(DrawBoxOptions.DoubleLines);
+            blueTerm[26, 6, 1, 3].DrawBox(DrawBoxOptions.DoubleLines | DrawBoxOptions.ContinueLines);
 
             Terminal[2, 10].Write("Because this is tailored for games, there's some fun glyphs in here:");
             Glyph[] glyphs = new Glyph[]
@@ -42,35 +42,11 @@ namespace Malison.ExampleApp
                 Glyph.ArrowLeft,
                 Glyph.ArrowRight,
                 Glyph.ArrowUp,
-                Glyph.Box,
                 Glyph.Bullet,
-                Glyph.Dark,
-                Glyph.DarkFill,
-                Glyph.Dashes,
-                Glyph.Door,
-                Glyph.Face,
-                Glyph.Grass,
-                Glyph.Gray,
-                Glyph.GrayFill,
-                Glyph.Hill,
-                Glyph.HorizontalBars,
-                Glyph.HorizontalBarsFill,
-                Glyph.Light,
-                Glyph.LightFill,
-                Glyph.Mountains,
-                Glyph.Solid,
-                Glyph.SolidFill,
-                Glyph.Tombstone,
-                Glyph.TreeConical,
-                Glyph.TreeDots,
-                Glyph.TreeRound,
                 Glyph.TriangleDown,
                 Glyph.TriangleLeft,
                 Glyph.TriangleRight,
                 Glyph.TriangleUp,
-                Glyph.TwoDots,
-                Glyph.VerticalBars,
-                Glyph.VerticalBarsFill
             };
 
             int x = 4;

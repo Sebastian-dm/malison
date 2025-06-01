@@ -44,6 +44,7 @@ namespace Malison.Core
         public void Set(Vec pos, Character value)
         {
             SetInternal(FlipNegativePosition(pos), value);
+            SetInternal(FlipNegativePosition(pos), value);
         }
 
         public void Set(int x, int y, Character value)
@@ -132,6 +133,11 @@ namespace Malison.Core
                 // don't run past edge
                 if (pos.X >= Size.X) break;
             }
+        }
+
+        public void Write(int spriteId) {
+            Glyph character = ResolveSpriteToGlyph(spriteId);
+            Write(character);
         }
 
         public void Scroll(Vec offset, Func<Vec, Character> scrollOnCallback)
@@ -417,6 +423,11 @@ namespace Malison.Core
             {
                 WriteLineChar(iter, middle);
             }
+        }
+
+        private static Glyph ResolveSpriteToGlyph(int spriteId) {
+            // TODO: For now: crude mapping
+            return (Glyph)(spriteId % 256); // fallback or lookup from sprite sheet
         }
 
         private void WriteLineChar(Vec pos, Glyph glyph)

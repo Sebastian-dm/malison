@@ -37,12 +37,14 @@ namespace Malison.WinForms
             this.m7x10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m8x12ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m10x12ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.x24ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // mTerminalControl
             // 
             this.mTerminalControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mTerminalControl.HideCursor = true;
             this.mTerminalControl.Location = new System.Drawing.Point(0, 24);
             this.mTerminalControl.Name = "mTerminalControl";
             this.mTerminalControl.Size = new System.Drawing.Size(284, 240);
@@ -79,7 +81,8 @@ namespace Malison.WinForms
             this.m6x10ToolStripMenuItem,
             this.m7x10ToolStripMenuItem,
             this.m8x12ToolStripMenuItem,
-            this.m10x12ToolStripMenuItem});
+            this.m10x12ToolStripMenuItem,
+            this.x24ToolStripMenuItem});
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.fontToolStripMenuItem.Text = "Font";
@@ -88,30 +91,37 @@ namespace Malison.WinForms
             // m6x10ToolStripMenuItem
             // 
             this.m6x10ToolStripMenuItem.Name = "m6x10ToolStripMenuItem";
-            this.m6x10ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.m6x10ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.m6x10ToolStripMenuItem.Text = "6 x 10";
             this.m6x10ToolStripMenuItem.Click += new System.EventHandler(this.Font6x10ToolStripMenuItem_Click);
             // 
             // m7x10ToolStripMenuItem
             // 
             this.m7x10ToolStripMenuItem.Name = "m7x10ToolStripMenuItem";
-            this.m7x10ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.m7x10ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.m7x10ToolStripMenuItem.Text = "7 x 10";
             this.m7x10ToolStripMenuItem.Click += new System.EventHandler(this.Font7x10ToolStripMenuItem1_Click);
             // 
             // m8x12ToolStripMenuItem
             // 
             this.m8x12ToolStripMenuItem.Name = "m8x12ToolStripMenuItem";
-            this.m8x12ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.m8x12ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.m8x12ToolStripMenuItem.Text = "8 x 12";
             this.m8x12ToolStripMenuItem.Click += new System.EventHandler(this.Font8x12ToolStripMenuItem_Click);
             // 
             // m10x12ToolStripMenuItem
             // 
             this.m10x12ToolStripMenuItem.Name = "m10x12ToolStripMenuItem";
-            this.m10x12ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.m10x12ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.m10x12ToolStripMenuItem.Text = "10 x 12";
             this.m10x12ToolStripMenuItem.Click += new System.EventHandler(this.Font10x12ToolStripMenuItem_Click);
+            // 
+            // x24ToolStripMenuItem
+            // 
+            this.x24ToolStripMenuItem.Name = "x24ToolStripMenuItem";
+            this.x24ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.x24ToolStripMenuItem.Text = "16 x 24";
+            this.x24ToolStripMenuItem.Click += new System.EventHandler(this.Font16x24ToolStripMenuItem_Click);
             // 
             // TerminalForm
             // 
@@ -142,5 +152,6 @@ namespace Malison.WinForms
         private System.Windows.Forms.ToolStripMenuItem m7x10ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem m8x12ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem m10x12ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem x24ToolStripMenuItem;
     }
 }

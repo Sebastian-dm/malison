@@ -14,7 +14,8 @@ namespace Malison.WinForms
         public static GlyphSheet Terminal7x10 { get { return LazyCreate(ref sTerminal7x10, Properties.Resources.Terminal7x10); } }
         public static GlyphSheet Terminal8x12 { get { return LazyCreate(ref sTerminal8x12, Properties.Resources.Terminal8x12); } }
         public static GlyphSheet Terminal10x12 { get { return LazyCreate(ref sTerminal10x12, Properties.Resources.Terminal10x12); } }
-        
+        public static GlyphSheet BmacSmooth16x24 { get { return LazyCreate(ref sBmac_smooth_16x24, Properties.Resources.Bmac_smooth_16x24); } }
+
         private static GlyphSheet LazyCreate(ref GlyphSheet sheet, Bitmap bitmap)
         {
             if (sheet == null)
@@ -85,10 +86,14 @@ namespace Malison.WinForms
         private const int GlyphsPerRow = 32;
         private const int GlyphsRows = 6;
 
+        //private const int GlyphsPerRow = 16;
+        //private const int GlyphsRows = 16;
+
         private static GlyphSheet sTerminal6x10;
         private static GlyphSheet sTerminal7x10;
         private static GlyphSheet sTerminal8x12;
         private static GlyphSheet sTerminal10x12;
+        private static GlyphSheet sBmac_smooth_16x24;
 
         private Bitmap mBitmap;
         private Dictionary<Character, Bitmap> mCharacterCache;

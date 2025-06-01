@@ -97,5 +97,10 @@ namespace Malison.WinForms
             mTerminalControl.GlyphSheet = GlyphSheet.Terminal10x12;
             ResizeToFitTerminal();
         }
+
+        private void Font16x24ToolStripMenuItem_Click(object sender, EventArgs e) {
+            mTerminalControl.GlyphSheet = GlyphSheet.BmacSmooth16x24;
+            ResizeToFitTerminal();
+        }
     }
 }
