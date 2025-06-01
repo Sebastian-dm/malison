@@ -12,3 +12,4 @@ artifacts/
 *.sln.ide
 
 /.vs
+/bin
