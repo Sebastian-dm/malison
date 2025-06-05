@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Malison.Core
 {
-    public enum GlyphAlt
+    // TODO: Implement the bar endings
+    public enum Glyph
     {
         WhiteSpace,
         Face,
@@ -277,7 +278,7 @@ namespace Malison.Core
         Square,
     }
 
-    public enum Glyph {
+    public enum GlyphAlt {
         Space,
         ExclamationMark,
         Quote,

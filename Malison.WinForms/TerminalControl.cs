@@ -23,7 +23,7 @@ namespace Malison.WinForms
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             SetStyle(ControlStyles.Opaque, true);
 
-            mGlyphSheet = GlyphSheet.BmacSmooth16x24;
+            mGlyphSheet = GlyphSheet.GetGlyphSheet();
 
             HideCursor = true;
         }

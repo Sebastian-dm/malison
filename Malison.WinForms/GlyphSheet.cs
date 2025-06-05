@@ -2,46 +2,43 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
+using System.Linq;
 using System.Text;
-
+using System.Text.Json;
 using Malison.Core;
+using static System.Net.Mime.MediaTypeNames;
 
-namespace Malison.WinForms
-{
-    public class GlyphSheet
-    {
-        public static GlyphSheet Terminal6x10 { get { return LazyCreate(ref sTerminal6x10, Properties.Resources.Terminal6x10); } }
-        public static GlyphSheet Terminal7x10 { get { return LazyCreate(ref sTerminal7x10, Properties.Resources.Terminal7x10); } }
-        public static GlyphSheet Terminal8x12 { get { return LazyCreate(ref sTerminal8x12, Properties.Resources.Terminal8x12); } }
-        public static GlyphSheet Terminal10x12 { get { return LazyCreate(ref sTerminal10x12, Properties.Resources.Terminal10x12); } }
-        public static GlyphSheet BmacSmooth16x24 { get { return LazyCreate(ref sBmac_smooth_16x24, Properties.Resources.Bmac_smooth_16x24); } }
+namespace Malison.WinForms {
+    public class GlyphSheet {
 
-        private static GlyphSheet LazyCreate(ref GlyphSheet sheet, Bitmap bitmap)
-        {
-            if (sheet == null)
-            {
-                sheet = new GlyphSheet(bitmap);
+        public string Id { get; private set; }
+
+
+
+        public static GlyphSheet GetGlyphSheet(string id = "Default") {
+            var glyphSheet = sGlyphSheets.FirstOrDefault(gs => gs.Id == id);
+
+            if (glyphSheet == null) {
+                glyphSheet = new GlyphSheet(id);
             }
-
-            return sheet;
+            return glyphSheet;
         }
 
-        public int Width { get { return mBitmap.Width / GlyphsPerRow; } }
-        public int Height { get { return mBitmap.Height / GlyphsRows; } }
 
-        public Bitmap GetBitmap(Character character)
-        {
+        public int Width { get { return mBitmap.Width / GlyphsPerRow; } }
+        public int Height { get { return mBitmap.Height / GlyphRows; } }
+
+        public Bitmap GetBitmap(Character character) {
             // use the previously cached one if there
             Bitmap bitmap = null;
-            if (mCharacterCache.TryGetValue(character, out bitmap))
-            {
+            if (mCharacterCache.TryGetValue(character, out bitmap)) {
                 return bitmap;
             }
 
             // not there, so create it
             Bitmap characterBitmap = new Bitmap(Width, Height);
-            using (Graphics g = Graphics.FromImage(characterBitmap))
-            {
+            using (Graphics g = Graphics.FromImage(characterBitmap)) {
                 byte glyph = (byte)character.Glyph;
                 int column = glyph % GlyphsPerRow;
                 int row = glyph / GlyphsPerRow;
@@ -66,8 +63,7 @@ namespace Malison.WinForms
             return characterBitmap;
         }
 
-        public void Draw(Graphics g, int x, int y, Character character)
-        {
+        public void Draw(Graphics g, int x, int y, Character character) {
             // don't draw if it's a blank glyph
             if (character.Glyph == Glyph.Space) return;
 
@@ -77,25 +73,40 @@ namespace Malison.WinForms
             g.DrawImageUnscaledAndClipped(characterBitmap, destRect);
         }
 
-        private GlyphSheet(Bitmap bitmap)
-        {
-            mBitmap = bitmap;
+        private GlyphSheet(string id) {
+            Id = id;
+            string configText = File.ReadAllText($"images/{id}.json");
+            var config = JsonSerializer.Deserialize<GlyphSheetConfig>(configText);
+            GlyphWidth = config.GlyphWidth;
+            GlyphHeight = config.GlyphHeight;
+            GlyphsPerRow = config.GlyphsPerRow;
+            GlyphRows = config.GlyphRows;
+            AsciiOffset = config.AsciiOffset;
+
+            string bitMapFileName = $"images/{id}.png";
+            mBitmap = new Bitmap(bitMapFileName);
             mCharacterCache = new Dictionary<Character, Bitmap>();
         }
 
-        private const int GlyphsPerRow = 32;
-        private const int GlyphsRows = 6;
+        private int GlyphWidth { get; set; }
+        private int GlyphHeight { get; set; }
+        private int GlyphsPerRow { get; set; }
+        private int GlyphRows { get; set; }
+        private int AsciiOffset { get; set; }
 
-        //private const int GlyphsPerRow = 16;
-        //private const int GlyphsRows = 16;
-
-        private static GlyphSheet sTerminal6x10;
-        private static GlyphSheet sTerminal7x10;
-        private static GlyphSheet sTerminal8x12;
-        private static GlyphSheet sTerminal10x12;
-        private static GlyphSheet sBmac_smooth_16x24;
+        private static List<GlyphSheet> sGlyphSheets = new List<GlyphSheet> { };
 
         private Bitmap mBitmap;
         private Dictionary<Character, Bitmap> mCharacterCache;
+    }
+
+
+    public class GlyphSheetConfig {
+        public int GlyphWidth { get; set; }
+        public int GlyphHeight { get; set; }
+        public int GlyphsPerRow { get; set; } = 32;
+        public int GlyphRows { get; set; } = 6;
+        public int AsciiOffset { get; set; } = 32; // default to ASCII offset
+
     }
 }

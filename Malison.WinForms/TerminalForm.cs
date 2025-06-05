@@ -40,6 +40,7 @@ namespace Malison.WinForms
 
             InitializeComponent();
 
+            this.mMenuStrip.Enabled = false;
             mTerminalControl.Terminal = terminal;
         }
 
@@ -69,37 +70,37 @@ namespace Malison.WinForms
 
         private void FontToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
         {
-            m6x10ToolStripMenuItem.Checked = (mTerminalControl.GlyphSheet == GlyphSheet.Terminal6x10);
-            m7x10ToolStripMenuItem.Checked = (mTerminalControl.GlyphSheet == GlyphSheet.Terminal7x10);
-            m8x12ToolStripMenuItem.Checked = (mTerminalControl.GlyphSheet == GlyphSheet.Terminal8x12);
+            m6x10ToolStripMenuItem.Checked = (mTerminalControl.GlyphSheet == GlyphSheet.GetGlyphSheet("Terminal6x10"));
+            m7x10ToolStripMenuItem.Checked = (mTerminalControl.GlyphSheet == GlyphSheet.GetGlyphSheet("Terminal7x10"));
+            m8x12ToolStripMenuItem.Checked = (mTerminalControl.GlyphSheet == GlyphSheet.GetGlyphSheet("Terminal8x12"));
         }
 
         private void Font6x10ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mTerminalControl.GlyphSheet = GlyphSheet.Terminal6x10;
+            mTerminalControl.GlyphSheet = GlyphSheet.GetGlyphSheet("Terminal6x10");
             ResizeToFitTerminal();
         }
 
         private void Font7x10ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            mTerminalControl.GlyphSheet = GlyphSheet.Terminal7x10;
+            mTerminalControl.GlyphSheet = GlyphSheet.GetGlyphSheet("Terminal7x10");
             ResizeToFitTerminal();
         }
 
         private void Font8x12ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mTerminalControl.GlyphSheet = GlyphSheet.Terminal8x12;
+            mTerminalControl.GlyphSheet = GlyphSheet.GetGlyphSheet("Terminal8x12");
             ResizeToFitTerminal();
         }
 
         private void Font10x12ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mTerminalControl.GlyphSheet = GlyphSheet.Terminal10x12;
+            mTerminalControl.GlyphSheet = GlyphSheet.GetGlyphSheet("Terminal10x12");
             ResizeToFitTerminal();
         }
 
         private void Font16x24ToolStripMenuItem_Click(object sender, EventArgs e) {
-            mTerminalControl.GlyphSheet = GlyphSheet.BmacSmooth16x24;
+            mTerminalControl.GlyphSheet = GlyphSheet.GetGlyphSheet("Default");
             ResizeToFitTerminal();
         }
     }
