@@ -261,21 +261,24 @@ namespace Malison.Core
         PhiLower,
         Epsilon,
         Interssection,
-        IdenticalTo,
-        PlusMinus,
-        GreaterThanOrEqualTo,
-        LessThanOrEqualTo,
+
+        BarDown,
+        BarLeft,
+        BarRight,
+        BarUp,
+        BarDoubleDown,
+        BarDoubleLeft,
+        BarDoubleRight,
+        BarDoubleUp,
         TopHalfIntegral,
         BottomHalfIntegral,
-        Division,
         AlmostEqualTo,
         Degree,
         Bullet,
         HatchLightUltra,
-        SquareRoot,
-        SuperscriptNLower,
-        Superscript2Lower,
         Square,
+        Unused1,
+
     }
 
     public enum GlyphAlt {

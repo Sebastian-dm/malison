@@ -388,6 +388,7 @@ namespace Malison.Core
             Glyph middle = Glyph.BarUpDown;
             Glyph bottom = Glyph.BarUp;
 
+
             if ((options & DrawBoxOptions.DoubleLines) == DrawBoxOptions.DoubleLines)
             {
                 middle = Glyph.BarDoubleUpDown;

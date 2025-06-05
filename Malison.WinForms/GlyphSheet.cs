@@ -77,8 +77,6 @@ namespace Malison.WinForms {
             Id = id;
             string configText = File.ReadAllText($"images/{id}.json");
             var config = JsonSerializer.Deserialize<GlyphSheetConfig>(configText);
-            GlyphWidth = config.GlyphWidth;
-            GlyphHeight = config.GlyphHeight;
             GlyphsPerRow = config.GlyphsPerRow;
             GlyphRows = config.GlyphRows;
             AsciiOffset = config.AsciiOffset;
@@ -87,9 +85,6 @@ namespace Malison.WinForms {
             mBitmap = new Bitmap(bitMapFileName);
             mCharacterCache = new Dictionary<Character, Bitmap>();
         }
-
-        private int GlyphWidth { get; set; }
-        private int GlyphHeight { get; set; }
         private int GlyphsPerRow { get; set; }
         private int GlyphRows { get; set; }
         private int AsciiOffset { get; set; }
