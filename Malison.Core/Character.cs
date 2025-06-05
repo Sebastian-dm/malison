@@ -24,8 +24,7 @@ namespace Malison.Core
         /// <returns></returns>
         public static Glyph ToGlyph(char ascii)
         {
-            return (Glyph)(ascii - 0);
-            // TODO: use GlyphSheet ASCII offset property
+            return (Glyph)(ascii);
         }
 
         /// <summary>

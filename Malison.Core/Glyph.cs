@@ -4,7 +4,6 @@ using System.Text;
 
 namespace Malison.Core
 {
-    // TODO: Implement the bar endings
     public enum Glyph
     {
         WhiteSpace,
